@@ -4,7 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider2D))]
 
-public class Fish : MonoBehaviour
+public class FishCtrl : MonoBehaviour
 {
     [SerializeField]
     private float swimmingSpeed = 0.5f;

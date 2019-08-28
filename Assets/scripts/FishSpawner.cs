@@ -51,7 +51,7 @@ public class FishSpawner : MonoBehaviour
             {
                 GameObject go = deadFish[0];
                 deadFish.RemoveAt(0);
-                Fish f = go.GetComponent<Fish>();
+                FishCtrl f = go.GetComponent<FishCtrl>();
                 f.Reset(trans);
             }
             else{

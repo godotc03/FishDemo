@@ -4,13 +4,11 @@ using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider2D))]
 
-public class fish : MonoBehaviour
+public class Fish : MonoBehaviour
 {
     [SerializeField]
     private float swimmingSpeed = 0.5f;
     private float turnRoundInterval = 2.0f;      //five seconds make a random turn round
-
-    public Transform spawnPos;
 
     private Animator anim;
     private SpriteRenderer spRenderer;
@@ -19,6 +17,7 @@ public class fish : MonoBehaviour
     private float liveTime = 0f;
     private float turnRoundTime = 0f;
     private bool isDead = false;
+    private bool isHit = false;
 
     void Start()
     {
@@ -33,14 +32,16 @@ public class fish : MonoBehaviour
 
         if (liveTime >= resetTime)
         {
-            Reset();
+            Dead();
         }
         else if (liveTime >= resetTime - fadeOutTime || isDead)
         {
             spRenderer.color -= new Color(0,0,0,Time.deltaTime/fadeOutTime);
         }
-
-        Swimming();
+        else if(!isHit)
+        {
+            Swimming();
+        }
     }
 
     private void Swimming()
@@ -61,17 +62,27 @@ public class fish : MonoBehaviour
     private void OnMouseDown()
     {
         anim.SetBool("isHit", true);
-        
+        isHit = true;
     }
 
-    public void Reset()
+    public void Dead()
     {
+        FishSpawner.Instance.AddDeadFish(gameObject);
+        gameObject.SetActive(false);
+        isDead = true;
+    }
+
+    public void Reset(Transform trans)
+    {
+        gameObject.SetActive(true);
         anim.SetBool("isHit", false);
         anim.Play("swimming");
         liveTime = 0;
         turnRoundTime = 0;
+        isDead = false;
+        isHit = false;
         spRenderer.color = new Color(1,1,1,1);
-        transform.position = spawnPos.position;
-        transform.rotation = spawnPos.rotation;
+        transform.position = trans.position;
+        transform.rotation = trans.rotation;
     }
 }

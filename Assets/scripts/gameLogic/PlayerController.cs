@@ -27,7 +27,8 @@ public class PlayerController : MonoBehaviour
     private bool IsGunChangeable = true;
     private float gunLevelChangeCD = 3f;
 
-
+    public AudioClip[] bulletAudios;
+    private AudioSource audioSrc;
 
     private void Awake()
     {
@@ -38,6 +39,13 @@ public class PlayerController : MonoBehaviour
         GunLevel = 0;
         GoldCount = 1000;
         DiamondCount = 100;
+
+        audioSrc = transform.GetComponent<AudioSource>();
+        if(audioSrc != null && bulletAudios.Length > 0)
+        {
+            audioSrc.clip = bulletAudios[0];
+            audioSrc.Play();
+        }
     }
 
     // Start is called before the first frame update
@@ -108,7 +116,9 @@ public class PlayerController : MonoBehaviour
 
     private void Attack()
     {
+
         Instantiate(bullets[GunLevel], firePos.position, transform.rotation);
+        audioSrc.Play();
     }
 
     public void AddGold(int v)
@@ -133,7 +143,10 @@ public class PlayerController : MonoBehaviour
         {
             GunLevel = MaxGunLevel;
         }
-
+        if(audioSrc != null & bulletAudios.Length > GunLevel)
+        {
+            audioSrc.clip = bulletAudios[GunLevel];
+        }
         GunController.instance.RefreshGunLevel(GunLevel, MaxGunLevel);
 
     }

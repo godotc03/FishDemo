@@ -30,10 +30,13 @@ public class FishCtrl : MonoBehaviour
     private bool isDead = false;
     private bool isHit = false;
 
+    private AudioSource audioSrc;
+
     void Start()
     {
         anim = GetComponent<Animator>();
         spRenderer = GetComponent<SpriteRenderer>();
+        audioSrc = transform.GetComponent<AudioSource>();
         HP = MaxHP;
     }
 
@@ -75,6 +78,9 @@ public class FishCtrl : MonoBehaviour
     {
         anim.SetBool("isHit", true);
         isHit = true;
+        if(audioSrc != null){
+            audioSrc.Play();
+        }
     }
 
     public void Dead()

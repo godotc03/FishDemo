@@ -1,0 +1,682 @@
+fileFormatVersion: 2
+guid: 8b3afe3eec675d64783fcc21fcc52afa
+timeCreated: 1507220004
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: common_icon_0
+    21300002: common_icon_1
+    21300004: common_icon_2
+    21300006: common_icon_3
+    21300008: common_icon_4
+    21300010: common_icon_5
+    21300012: common_icon_6
+    21300014: common_icon_7
+    21300016: common_icon_8
+    21300018: common_icon_9
+    21300020: common_icon_10
+    21300022: common_icon_11
+    21300024: common_icon_12
+    21300026: common_icon_13
+    21300028: common_icon_14
+    21300030: common_icon_15
+    21300032: common_icon_16
+    21300034: common_icon_17
+    21300036: common_icon_18
+    21300038: common_icon_19
+    21300040: common_icon_20
+    21300042: common_icon_21
+    21300044: common_icon_22
+    21300046: common_icon_23
+    21300048: common_icon_24
+    21300050: common_icon_25
+    21300052: common_icon_26
+    21300054: common_icon_27
+    21300056: common_icon_28
+    21300058: common_icon_29
+    21300060: common_icon_30
+    21300062: common_icon_31
+    21300064: common_icon_32
+    21300066: common_icon_33
+    21300068: common_icon_34
+    21300070: common_icon_35
+    21300072: common_icon_36
+    21300074: common_icon_37
+    21300076: common_icon_38
+    21300078: common_icon_39
+    21300080: common_icon_40
+    21300082: common_icon_41
+    21300084: common_icon_42
+    21300086: common_icon_43
+    21300088: common_icon_44
+    21300090: common_icon_45
+    21300092: common_icon_46
+    21300094: common_icon_47
+    21300096: common_icon_48
+    21300098: common_icon_49
+    21300100: common_icon_50
+    21300102: common_icon_51
+    21300104: common_icon_52
+    21300106: common_icon_53
+    21300108: common_icon_54
+    21300110: common_icon_55
+    21300112: common_icon_56
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: common_icon_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 846
+        width: 171
+        height: 175
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_1
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 874
+        width: 115
+        height: 147
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_2
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 926
+        width: 76
+        height: 96
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_3
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 933
+        width: 78
+        height: 91
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_4
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 939
+        width: 61
+        height: 83
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_5
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 847
+        width: 93
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_6
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 914
+        width: 5
+        height: 9
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_7
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 858
+        width: 59
+        height: 79
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_8
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 678
+        width: 135
+        height: 166
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_9
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 687
+        width: 103
+        height: 157
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_10
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 735
+        width: 87
+        height: 109
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_11
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 757
+        width: 87
+        height: 88
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_12
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 758
+        width: 85
+        height: 87
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_13
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 782
+        width: 73
+        height: 73
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_14
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 698
+        width: 110
+        height: 34
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_15
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 696
+        width: 133
+        height: 60
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_16
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 699
+        width: 54
+        height: 57
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_17
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 710
+        width: 68
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_18
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 680
+        width: 8
+        height: 4
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_19
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 679
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_20
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 573
+        width: 108
+        height: 111
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_21
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 584
+        width: 79
+        height: 112
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_22
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 616
+        width: 56
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_23
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 622
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 513
+        width: 93
+        height: 162
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_25
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 558
+        width: 5
+        height: 11
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_26
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 562
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_27
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 518
+        width: 72
+        height: 66
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_28
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 520
+        width: 51
+        height: 64
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_29
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 540
+        width: 54
+        height: 75
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_30
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 566
+        width: 55
+        height: 54
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_31
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 518
+        width: 28
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_32
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 476
+        width: 56
+        height: 62
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_33
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 351
+        width: 150
+        height: 160
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_34
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 404
+        width: 72
+        height: 112
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_35
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 424
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_36
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 412
+        width: 85
+        height: 103
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_37
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 419
+        width: 55
+        height: 55
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_38
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 412
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_39
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 351
+        width: 74
+        height: 49
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_40
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 364
+        width: 33
+        height: 37
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_41
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 376
+        width: 74
+        height: 33
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_42
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 217
+        width: 104
+        height: 132
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_43
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 235
+        width: 75
+        height: 114
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_44
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 273
+        width: 86
+        height: 103
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_45
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 251
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_46
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 240
+        width: 78
+        height: 30
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_47
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 65
+        width: 137
+        height: 149
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_48
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 119
+        width: 70
+        height: 114
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_49
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 123
+        width: 109
+        height: 113
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_50
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 139
+        width: 94
+        height: 101
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_51
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 0
+        width: 113
+        height: 65
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_52
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 3
+        width: 63
+        height: 62
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_53
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 3
+        width: 67
+        height: 113
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_54
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 123
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_55
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 39
+        width: 57
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: common_icon_56
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 40
+        width: 82
+        height: 97
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

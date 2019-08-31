@@ -28,7 +28,8 @@ public class GunController : MonoBehaviour
             instance = this;
         }
         img = gunImage.GetComponent<Image>();
-
+        IncButton.onClick.AddListener(() => { PlayerController.Instance.ChangeGunLevel(1); });
+        DecButton.onClick.AddListener(() => { PlayerController.Instance.ChangeGunLevel(-1); });
     }
     // Start is called before the first frame update
     void Start()

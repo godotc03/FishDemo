@@ -9,6 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4677498296105770297}
+  - component: {fileID: 2902378601114603897}
+  - component: {fileID: 2126296169965921174}
+  - component: {fileID: 5209971907280532465}
   m_Layer: 10
   m_Name: bullet3
   m_TagString: Untagged
@@ -31,6 +34,67 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &2902378601114603897
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8578579838978179679}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.061072826, y: 0.43429542}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.22641087, y: 0.80999565}
+  m_EdgeRadius: 0
+--- !u!50 &2126296169965921174
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8578579838978179679}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &5209971907280532465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8578579838978179679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5f8fc1875a4940ef81e37812bc3f0c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  netPrefab: {fileID: 8423381484626528712, guid: c76ed64839c8d447d8ab2773636b35e6,
+    type: 3}
 --- !u!1001 &6589357687189097124
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42,11 +106,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bullet_3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6284137824118999702, guid: 3667688101c1440d1a03a0a69ca00eb8,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5008131371598378445, guid: 3667688101c1440d1a03a0a69ca00eb8,
         type: 3}
@@ -103,12 +162,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
-    - target: {fileID: 8938434716002356567, guid: 3667688101c1440d1a03a0a69ca00eb8,
-        type: 3}
-      propertyPath: netPrefab
-      value: 
-      objectReference: {fileID: 8423381484626528712, guid: c76ed64839c8d447d8ab2773636b35e6,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3667688101c1440d1a03a0a69ca00eb8, type: 3}
 --- !u!4 &2229964703847235433 stripped

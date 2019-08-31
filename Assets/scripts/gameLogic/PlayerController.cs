@@ -125,7 +125,6 @@ public class PlayerController : MonoBehaviour
 
     public void ChangeGunLevel(int delt)
     {
-        Debug.Log("Change gun level:" + delt.ToString());
         GunLevel += delt;
         IsGunChangeable = false;
         if(GunLevel < 0){

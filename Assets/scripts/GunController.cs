@@ -7,6 +7,10 @@ public class GunController : MonoBehaviour
 {
     public static GunController instance;
     public Sprite[] GunImages;
+    public Button IncButton;
+    public Button DecButton;
+    public Text goldText;
+    public Text diamondText;
 
 
     //TODO make animation and remove this code
@@ -37,7 +41,7 @@ public class GunController : MonoBehaviour
     {
 
         RotateGun();
-        img.sprite = GunImages[PlayerController.Instance.GunLevel - 1];
+
     }
 
     private void RotateGun()
@@ -78,4 +82,30 @@ public class GunController : MonoBehaviour
         transform.position = Vector3.Lerp(transform.position, idlePos.position, 0.2f);
     }
 
+    public void RefreshGunLevel(int level, int maxLevel)
+    {
+        img.sprite = GunImages[level];
+        if(level <= 0)
+        {
+            DecButton.interactable = false;
+        }
+        else
+        {
+            DecButton.interactable = true;
+        }
+        if(level >= maxLevel)
+        {
+            IncButton.interactable = false;
+        }
+        else
+        {
+            IncButton.interactable = true;
+        }
+    }
+
+    public void RefreshAward(int gold, int diamond)
+    {
+        goldText.text = gold.ToString();
+        diamondText.text = diamond.ToString();
+    }
 }

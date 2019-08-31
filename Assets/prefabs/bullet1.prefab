@@ -43,11 +43,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: bullet_1
       objectReference: {fileID: 0}
-    - target: {fileID: 6499806411026051282, guid: fabdfdbcdad354192a0cf36c3900b375,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 6057232714539202172, guid: fabdfdbcdad354192a0cf36c3900b375,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -103,7 +98,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
-    - target: {fileID: 4160865049054976334, guid: fabdfdbcdad354192a0cf36c3900b375,
+    - target: {fileID: 3298086696064560187, guid: fabdfdbcdad354192a0cf36c3900b375,
         type: 3}
       propertyPath: netPrefab
       value: 

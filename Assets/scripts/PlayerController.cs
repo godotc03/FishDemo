@@ -10,8 +10,6 @@ public class PlayerController : MonoBehaviour
     public int GoldCount { get; private set; }
     public int DiamondCount { get; private set; }
 
-
-
     public Transform[] bullets;
 
     private bool canAttack = true;  //For CD
@@ -22,6 +20,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private Transform firePos;
 
+    //For gun level change
+    [SerializeField]
+    private float GunChangeCD = 3f;
+    public int MaxGunLevel = 3;
+    private bool IsGunChangeable = true;
+    private float gunLevelChangeCD = 3f;
+
+
 
     private void Awake()
     {
@@ -29,13 +35,17 @@ public class PlayerController : MonoBehaviour
         {
             Instance = this;
         }
-        GunLevel = 1;
+        GunLevel = 0;
+        GoldCount = 1000;
+        DiamondCount = 100;
     }
 
     // Start is called before the first frame update
     void Start()
     {
         refillTime = 0f;
+        GunController.instance.RefreshGunLevel(GunLevel, MaxGunLevel);
+        GunController.instance.RefreshAward(GoldCount, DiamondCount);
     }
 
     // Update is called once per frame
@@ -56,6 +66,16 @@ public class PlayerController : MonoBehaviour
             if (Input.GetButtonDown("Fire1"))
             {
                 Attack();
+            }
+        }
+
+        if(!IsGunChangeable)
+        {
+            gunLevelChangeCD -= Time.deltaTime;
+            if(gunLevelChangeCD <= 0)
+            {
+                gunLevelChangeCD = GunChangeCD;
+                IsGunChangeable = true;
             }
         }
     }
@@ -88,16 +108,34 @@ public class PlayerController : MonoBehaviour
 
     private void Attack()
     {
-        Instantiate(bullets[GunLevel - 1], firePos.position, transform.rotation);
+        Instantiate(bullets[GunLevel], firePos.position, transform.rotation);
     }
 
     public void AddGold(int v)
     {
         GoldCount += v;
+        GunController.instance.RefreshAward(GoldCount, DiamondCount);
     }
 
     public void AddDiamond(int v)
     {
         DiamondCount += v;
+        GunController.instance.RefreshAward(GoldCount, DiamondCount);
+    }
+
+    public void ChangeGunLevel(int delt)
+    {
+        Debug.Log("Change gun level:" + delt.ToString());
+        GunLevel += delt;
+        IsGunChangeable = false;
+        if(GunLevel < 0){
+            GunLevel = 0;
+        }else if(GunLevel > MaxGunLevel)
+        {
+            GunLevel = MaxGunLevel;
+        }
+
+        GunController.instance.RefreshGunLevel(GunLevel, MaxGunLevel);
+
     }
 }

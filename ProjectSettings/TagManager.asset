@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Fish
+  - FishNet
   layers:
   - Default
   - TransparentFX
@@ -14,8 +16,8 @@ TagManager:
   - 
   - 
   - backgroud
-  - 
-  - 
+  - FishLayer
+  - PlayerLayer
   - 
   - 
   - 
@@ -43,4 +45,7 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: frontgroud
+    uniqueID: 698428669
     locked: 0

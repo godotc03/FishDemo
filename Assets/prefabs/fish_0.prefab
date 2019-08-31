@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 5546286394301414125}
   - component: {fileID: 5546286394301414121}
   - component: {fileID: 5546286394301414120}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fish_0
-  m_TagString: Untagged
+  m_TagString: Fish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -140,4 +140,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   swimmingSpeed: 2
-  spawnPos: {fileID: 0}
+  worth_Gold: 10
+  worth_Diamond: 0
+  goldPrefab: {fileID: 5484199672423900469, guid: b949806f2ca4e4266a49eaf47495bc87,
+    type: 3}
+  diamondPrefab: {fileID: 6290747138660498313, guid: 0346fa43fdbfb40e2bdc3fba6f0a01c2,
+    type: 3}
+  MaxHP: 5

@@ -47,7 +47,6 @@ public class GunController : MonoBehaviour
         Vector3 gunPos = transform.position;
         Vector3 targetDir = targetPos - gunPos;
         float rotateAngle = Vector2.Angle(targetDir, Vector3.up);
-        Debug.Log("targetPos:" + targetPos.ToString());
 
         if (targetPos.x > gunPos.x)
         {

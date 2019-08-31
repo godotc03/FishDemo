@@ -7,8 +7,12 @@ public class PlayerController : MonoBehaviour
     public static PlayerController Instance { get; private set; }
 
     public int GunLevel { get; private set; }
-    public Transform[] bullets;
+    public int GoldCount { get; private set; }
+    public int DiamondCount { get; private set; }
 
+
+
+    public Transform[] bullets;
 
     private bool canAttack = true;  //For CD
 
@@ -63,7 +67,6 @@ public class PlayerController : MonoBehaviour
         Vector3 gunPos = transform.position;
         Vector3 targetDir = targetPos - gunPos;
         float rotateAngle = Vector2.Angle(targetDir, Vector3.up);
-        Debug.Log("targetPos:" + targetPos.ToString());
 
         if (targetPos.x > gunPos.x)
         {
@@ -86,5 +89,15 @@ public class PlayerController : MonoBehaviour
     private void Attack()
     {
         Instantiate(bullets[GunLevel - 1], firePos.position, transform.rotation);
+    }
+
+    public void AddGold(int v)
+    {
+        GoldCount += v;
+    }
+
+    public void AddDiamond(int v)
+    {
+        DiamondCount += v;
     }
 }

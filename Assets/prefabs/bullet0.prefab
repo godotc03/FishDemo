@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5745381076314220551}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bullet0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,6 +42,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bullet_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1326111043541141481, guid: 81d074aece3b645f7bb49d956c92bfd3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1326111043541141478, guid: 81d074aece3b645f7bb49d956c92bfd3,
         type: 3}
@@ -98,6 +103,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 325367177851018078, guid: 81d074aece3b645f7bb49d956c92bfd3,
+        type: 3}
+      propertyPath: netPrefab
+      value: 
+      objectReference: {fileID: 9059606123855771303, guid: 954c84ff8aa68455faea9446c5d16823,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81d074aece3b645f7bb49d956c92bfd3, type: 3}
 --- !u!4 &2917422564974208745 stripped

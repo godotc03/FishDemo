@@ -9,9 +9,13 @@ public class bullet : MonoBehaviour
 {
     private float moveSpeed = 3f;
     private Rigidbody2D rg;
+    private int damage = 5;
+
+    public GameObject netPrefab;
+
     private void Awake()
     {
-        Destroy(gameObject, 3);
+        Destroy(gameObject, 3f);
         rg = GetComponent<Rigidbody2D>();
     }
     // Start is called before the first frame update
@@ -26,8 +30,18 @@ public class bullet : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        
+        if(other.transform.tag == "Fish")
+        {
+            FishCtrl ctrl = other.transform.GetComponent<FishCtrl>();
+            if(ctrl != null)
+            {
+                //ctrl.TakeDamage(damage);
+            }
+
+            Instantiate(netPrefab, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }
     }
 }

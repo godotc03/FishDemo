@@ -1,1 +1,2 @@
-﻿CS.UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+﻿require("lua.FixFishCtrl.lua")
+CS.UnityEngine.SceneManagement.SceneManager.LoadScene(0);

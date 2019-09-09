@@ -4,6 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider2D))]
 
+[XLua.Hotfix]
 public class FishCtrl : MonoBehaviour
 {
     [SerializeField]

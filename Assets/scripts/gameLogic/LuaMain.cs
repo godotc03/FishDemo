@@ -13,6 +13,11 @@ using System.IO;
 public class LuaMain : MonoBehaviour
 {
     LuaEnv luaEnv = null;
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
     // Start is called before the first frame update
     void Start()
     {

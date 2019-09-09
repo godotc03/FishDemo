@@ -1,0 +1,12 @@
+﻿--1.1 Fixed bug： Award many times
+
+xlua.private_accessible(CS.FishCtrl) 
+xlua.hotfix(CS.FishCtrl,'TakeDamage',function(self, val)
+    if self.HP > 0 then
+        self.HP = self.HP - val;
+        if self.HP <= 0 then
+            self:PlayDying();
+            self:Invoke("Award",0.5)
+        end
+    end
+end)

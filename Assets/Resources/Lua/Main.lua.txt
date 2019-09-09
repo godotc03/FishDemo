@@ -1,1 +1,1 @@
-﻿CS.UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+﻿CS.UnityEngine.SceneManagement.SceneManager.LoadScene(1);

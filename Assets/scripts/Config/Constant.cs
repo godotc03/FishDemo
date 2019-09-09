@@ -5,6 +5,30 @@ using UnityEngine;
 public class Constant : MonoBehaviour
 {
     public const string VERSION = "1.1.0";
+
+    public const bool UNITY_EDITOR =
+#if UNITY_EDITOR
+                true;
+#else
+                false;
+#endif
+
+
+    public const RuntimePlatform PLATFORM =
+#if UNITY_STANDALONE_WIN
+                RuntimePlatform.WindowsPlayer;
+#elif UNITY_STANDALONE_OSX
+                RuntimePlatform.OSXPlayer;
+#elif UNITY_ANDROID
+                RuntimePlatform.Android;
+#elif UNITY_IOS
+                RuntimePlatform.IPhonePlayer;
+#elif UNITY_WEBGL
+                RuntimePlatform.WebGLPlayer;
+#else
+            0;
+#endif
+
     public const string BUNDLE_DIR =
 #if UNITY_IOS
                 "iOS";
@@ -18,6 +42,7 @@ public class Constant : MonoBehaviour
 
     public const string VERSION_NAME = "Version.json";
     public const string FILE_LIST_NAME = "FileList.json";
+    public const string ASSET_BUNDLE_VARIANT = "ab";
 
     public static string PERSISTENT_DIR_PATH
     {

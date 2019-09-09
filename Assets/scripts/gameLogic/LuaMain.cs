@@ -2,6 +2,7 @@
 using System.Text;
 using UnityEngine;
 using XLua;
+using System.IO;
 
 
 /// <summary>
@@ -53,10 +54,34 @@ public class LuaMain : MonoBehaviour
     //TODO load from asset bundle and hot fixed directory
     public static TextAsset LoadLua(string relativePath)
     {
-        //TODO check hotfix direction
-        //Check assetbundle
+        string longRelativePath = relativePath + "." + Constant.ASSET_BUNDLE_VARIANT;
+
+        //TODO check hotfix direction (PERSISTENT_DIR_PATH)
+        //Debug.Log("Persistent Dir:"+Constant.PERSISTENT_DIR_PATH);
+
+        //Check assetbundle //TODO using different path along with platforms
+        string streamingPath = Constant.STREAMING_DIR_PATH + "/" + longRelativePath.ToLower();
+        if (File.Exists(streamingPath)) //TODO FileManager for different platform.
+        {
+            //Debug.Log("Load from assetbundle:" + relativePath);
+            int index = relativePath.LastIndexOf('/');
+            string assetName = relativePath.Substring(index + 1);
+            return LoadLuaBundle(streamingPath, assetName);
+        }
         //
         TextAsset asset = Resources.Load<TextAsset>(relativePath);
         return asset? asset:null;
+    }
+
+    public static TextAsset LoadLuaBundle(string path, string assetName)
+    {
+        AssetBundle assetBundle = AssetBundle.LoadFromFile(path);
+        if (assetBundle)
+        {
+            TextAsset asset = assetBundle.LoadAsset<TextAsset>(assetName);
+            assetBundle.Unload(false);
+            return asset;
+        }
+        return null;
     }
 }

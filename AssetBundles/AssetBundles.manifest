@@ -1,0 +1,7 @@
+ManifestFileVersion: 0
+CRC: 3530780684
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: main.lua.ab
+      Dependencies: {}

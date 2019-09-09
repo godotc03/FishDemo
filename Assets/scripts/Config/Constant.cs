@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Constant : MonoBehaviour
 {
-    public const string VERSION = "1.1.0";
+    public static string CDN_URL = "http://127.0.0.1:80/cdn";
+
 
     public const bool UNITY_EDITOR =
 #if UNITY_EDITOR
@@ -48,7 +49,7 @@ public class Constant : MonoBehaviour
     {
         get
         {
-            return Application.persistentDataPath + "/" + BUNDLE_DIR;
+            return Application.persistentDataPath;
         }
     }
     public static string STREAMING_DIR_PATH

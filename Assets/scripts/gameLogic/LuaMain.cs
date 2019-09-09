@@ -29,7 +29,7 @@ public class LuaMain : MonoBehaviour
     public void StartGame()
     {
         Debug.Log("Lua Start Game!");
-        luaEnv.DoString("require 'lua.Main'");
+        luaEnv.DoString("require 'lua.main'");
 
     }
 
@@ -56,8 +56,16 @@ public class LuaMain : MonoBehaviour
     {
         string longRelativePath = relativePath + "." + Constant.ASSET_BUNDLE_VARIANT;
 
-        //TODO check hotfix direction (PERSISTENT_DIR_PATH)
-        //Debug.Log("Persistent Dir:"+Constant.PERSISTENT_DIR_PATH);
+        //check hotfix direction (in PERSISTENT_DIR_PATH)
+        string persistentPath = Constant.PERSISTENT_DIR_PATH + "/hotfix/" + longRelativePath.ToLower();
+
+        if (File.Exists(persistentPath))
+        {
+            //Debug.Log("LoadLua from :" + persistentPath);
+            int index = relativePath.LastIndexOf('/');
+            string assetName = relativePath.Substring(index + 1);
+            return LoadLuaBundle(persistentPath, assetName);
+        }
 
         //Check assetbundle //TODO using different path along with platforms
         string streamingPath = Constant.STREAMING_DIR_PATH + "/" + longRelativePath.ToLower();
@@ -69,6 +77,7 @@ public class LuaMain : MonoBehaviour
             return LoadLuaBundle(streamingPath, assetName);
         }
         //
+        //Debug.Log("Load lua from resources:" + relativePath);
         TextAsset asset = Resources.Load<TextAsset>(relativePath);
         return asset? asset:null;
     }

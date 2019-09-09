@@ -40,6 +40,7 @@ public class LuaMain : MonoBehaviour
 
     private void OnDestroy()
     {
+        luaEnv.DoString("require 'lua.Dispose'");
         luaEnv.Dispose();
     }
 

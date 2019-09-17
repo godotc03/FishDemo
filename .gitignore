@@ -59,7 +59,7 @@ sysinfo.txt
 crashlytics-build.properties
 
 #Fakeserver
-/FakeServer/
+#/FakeServer/
 
 #xlua gen
 /[Aa]ssets/XLua/Gen/

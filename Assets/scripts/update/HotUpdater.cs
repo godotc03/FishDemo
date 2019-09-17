@@ -20,7 +20,7 @@ public class HotUpdater : MonoBehaviour
     //TestCode
     private string CDN_Version = "1.1.2";
     private string Cur_Version = "1.1.1";
-    private string[] fileList = { "lua/main.lua.ab","Version.json" };
+    private string[] fileList = { "lua/main.lua.ab","lua/fixfishctrl.lua.ab","Version.json" };
     //end of TestCode
     private string CDN_URL = "";
     public bool UpdateFinished { get; private set; }

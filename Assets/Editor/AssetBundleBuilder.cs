@@ -15,8 +15,10 @@ public class AssetBundleBuilder : EditorWindow
         {
             Directory.CreateDirectory(dir);
         }
-        //TODO different platform
+#if UNITY_EDITOR_WIN
+        BuildPipeline.BuildAssetBundles("AssetBundles", BuildAssetBundleOptions.None, BuildTarget.StandaloneWindows);
+#elif UNITY_EDITOR_OSX
         BuildPipeline.BuildAssetBundles("AssetBundles", BuildAssetBundleOptions.None, BuildTarget.StandaloneOSX);
-
+#endif
     }
 }

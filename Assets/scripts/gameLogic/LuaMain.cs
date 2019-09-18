@@ -12,23 +12,39 @@ using System.IO;
 
 public class LuaMain : MonoBehaviour
 {
+    private const float GC_INTERVAL = 1;//1 second
+    private float m_LastGcTime = 0;
     LuaEnv luaEnv = null;
+    private Func<string, LuaTable> m_Require;
+
+    public static LuaMain Instance
+    {
+        get;
+        private set;
+    }
 
     private void Awake()
     {
+        luaEnv = new LuaEnv();
+        luaEnv.AddLoader(CustomLoad);
+        if (Instance == null)
+            Instance = this;
         DontDestroyOnLoad(this.gameObject);
     }
     // Start is called before the first frame update
     void Start()
     {
-        luaEnv = new LuaEnv();
-        luaEnv.AddLoader(CustomLoad);
+        m_Require = luaEnv.Global.Get<Func<string, LuaTable>>("require");
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (Time.time - m_LastGcTime > GC_INTERVAL)
+        {
+            luaEnv.Tick();
+            m_LastGcTime = Time.time;
+        }
     }
 
     public void StartGame()
@@ -41,6 +57,7 @@ public class LuaMain : MonoBehaviour
     private void OnDestroy()
     {
         luaEnv.DoString("require 'lua.Dispose'");
+        m_Require = null;
         luaEnv.Dispose();
     }
 
@@ -99,4 +116,19 @@ public class LuaMain : MonoBehaviour
         }
         return null;
     }
+
+    public LuaTable Require(string luaPath)
+    {
+        try
+        {
+            //Debug.Log("Require: " + luaPath);
+            return m_Require(luaPath);
+        }
+        catch (LuaException le)
+        {
+            Debug.LogError(le);
+            return null;
+        }
+    }
+
 }

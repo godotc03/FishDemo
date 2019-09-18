@@ -1,2 +1,10 @@
 ﻿require("lua.FixFishCtrl.lua")
-CS.UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+local cs_coroutine = (require 'lua.cs_coroutine')
+local FixedStartScene = require("lua.FixStartScene.lua")
+
+cs_coroutine.start(function()
+    CS.UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+    --coroutine.yield(nil)
+    coroutine.yield(CS.UnityEngine.WaitForSeconds(1))
+    FixedStartScene:Fixed()
+end)

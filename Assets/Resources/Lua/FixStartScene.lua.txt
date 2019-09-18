@@ -1,0 +1,14 @@
+﻿return {
+    Go = nil,
+    Fixed = function(self)
+        self.Go = CS.UnityEngine.GameObject.Find("Button")
+        if self.Go ~= nil then
+            self.Go:GetComponent('Button').interactable = true
+            CS.LuaHelper.AddLuaComponent(self.Go,"lua.luabehaviour_empty.lua")
+            
+        else 
+            print("can Not find the button")
+        end
+        self.Go = nil
+    end
+}

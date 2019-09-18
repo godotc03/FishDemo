@@ -9,7 +9,7 @@ public class bullet : MonoBehaviour
 {
     private float moveSpeed = 3f;
     private Rigidbody2D rg;
-    private int damage = 5;
+    //private int damage = 5;
 
     public GameObject netPrefab;
 

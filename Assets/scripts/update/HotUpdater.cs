@@ -71,9 +71,7 @@ public class HotUpdater : MonoBehaviour
                 Debug.Log("Download error:" + request.error);
             }
         }
-        
-
-        yield return new WaitForSeconds(3);
+        //yield return new WaitForSeconds(3);
         UpdateFinished = true;
     }
 }

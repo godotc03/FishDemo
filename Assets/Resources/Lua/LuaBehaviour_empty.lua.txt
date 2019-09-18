@@ -1,0 +1,31 @@
+﻿--TODO add class support in util
+local obj = {
+    Start = function(self)
+        print("lua start...")
+        self.Go = CS.UnityEngine.GameObject.Find("Button") --TODO Set gameobject in C#
+        self.alpha = 128;
+        self.alphaDelt = 3;
+    end,
+
+    Update = function(self)
+        --TODO add profiler
+        
+        self.alpha = self.alpha + self.alphaDelt
+        if self.alpha > 255 then
+            self.alphaDelt = -3
+        elseif self.alpha < 128 then
+            self.alphaDelt = 3
+        end
+        
+        local color = self.Go:GetComponent("Image").color
+        color.a = self.alpha/255
+        self.Go:GetComponent("Image").color = color 
+    end,
+    
+    OnDestroy = function(self)
+        self.Go = nil
+        print("lua destroy")
+    end
+};
+
+return obj

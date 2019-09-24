@@ -20,14 +20,18 @@ public class HotUpdater : MonoBehaviour
     //TestCode
     private string CDN_Version = "1.1.2";
     private string Cur_Version = "1.1.1";
-    private string[] fileList = { "lua/main.lua.ab","lua/fixfishctrl.lua.ab","Version.json" };
+    private string[] fileList = { "lua/main.lua.ab", "lua/fixfishctrl.lua.ab", "Version.json" };
     //end of TestCode
     private string CDN_URL = "";
     public bool UpdateFinished { get; private set; }
     // Start is called before the first frame update
     private void Awake()
     {
+#if UNITY_EDITOR_WIN
+        CDN_URL = "file:///" + Application.dataPath + "/../FakeServer/";
+#elif UNITY_EDITOR_OSX
         CDN_URL = "file://" + Application.dataPath + "/../FakeServer/";
+#endif
     }
     void Start()
     {

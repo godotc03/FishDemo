@@ -21,4 +21,24 @@ public class AssetBundleBuilder : EditorWindow
         BuildPipeline.BuildAssetBundles("AssetBundles", BuildAssetBundleOptions.None, BuildTarget.StandaloneOSX);
 #endif
     }
+
+    //TODO
+    [MenuItem("HotUpdate/Lua2Txt")]
+    static void ChangeLuaToTxt()
+    {
+
+    }
+
+    [MenuItem("HotUpdate/Generate FileList")]
+    static void GenerateDLCFileList()
+    {
+
+    }
+
+    [MenuItem("HotUpdate/Generate Version File")]
+    static void GenerateDLCVersionFile()
+    {
+
+    }
+
 }

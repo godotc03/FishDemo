@@ -1,7 +1,10 @@
 ManifestFileVersion: 0
-CRC: 1030254571
+CRC: 3181108552
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
       Name: main.lua.ab
+      Dependencies: {}
+    Info_1:
+      Name: fish_dlc.ab
       Dependencies: {}

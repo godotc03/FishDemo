@@ -1,1 +1,2 @@
 ﻿xlua.hotfix(CS.FishCtrl,'TakeDamage',nil)
+xlua.hotfix(CS.FishSpawner,'Start',nil)

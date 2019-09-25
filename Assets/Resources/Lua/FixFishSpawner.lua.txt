@@ -1,0 +1,14 @@
+﻿--1.1 Fixed bug： Award many times
+
+xlua.private_accessible(CS.FishCtrl) 
+xlua.hotfix(CS.FishSpawner,'Start',function(self)
+        local myLoadedAssetBundle = CS.UnityEngine.AssetBundle.LoadFromFile(
+            CS.System.IO.Path.Combine(CS.UnityEngine.Application.streamingAssetsPath, 'fish_dlc.ab'))
+        if myLoadedAssetBundle == nil then
+            print("Failed to load AssetBundle!");
+            return;
+        end
+
+        local fish_dlc = myLoadedAssetBundle:LoadAsset("fish_dlc");
+        self.fishPrefabs[0] = fish_dlc;
+end)

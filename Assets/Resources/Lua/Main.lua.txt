@@ -1,6 +1,5 @@
 ﻿require("lua.FixFishCtrl.lua")
 require("lua.FixFishSpawner.lua")
-print("dlccccccccccccccccccc")
 local cs_coroutine = (require 'lua.cs_coroutine')
 local FixedStartScene = require("lua.FixStartScene.lua")
 
